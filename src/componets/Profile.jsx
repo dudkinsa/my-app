@@ -1,10 +1,11 @@
 import React from 'react';
+import classes from './Profile.module.css';
 
 const Profile = () => {
     return (
-        <div className='content'>
+        <div className={classes.content}>
             <div>
-                <img className='img-background'
+                <img
                      src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg'/>
             </div>
             <di>
@@ -16,11 +17,11 @@ const Profile = () => {
             <div>
                 New post
             </div>
-            <div>
-                <div>
+            <div className={classes.posts}>
+                <div className={classes.item}>
                     post1
                 </div>
-                <div>
+                <div className={classes.item}>
                     post2
                 </div>
             </div>
