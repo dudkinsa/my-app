@@ -19,10 +19,10 @@ const Profile = () => {
             </div>
             <div className={classes.posts}>
                 <div className={classes.item}>
-                    post1
+                    your post1
                 </div>
                 <div className={classes.item}>
-                    post2
+                    your post2
                 </div>
             </div>
         </div>
