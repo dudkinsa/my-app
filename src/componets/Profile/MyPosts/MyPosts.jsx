@@ -17,8 +17,8 @@ const MyPosts = (props) => {
                 New post
             </div>
             <div className={classes.posts}>
-                <Post message='Hi, how are you?' quantityLikes = '1500'/>
-                <Post message = 'It`s my first post' quantityLikes = '1500'/>
+                <Post message='Hi, how are you?' quantityLikes = '250'/>
+                <Post message = 'It`s my first post' quantityLikes = '1230'/>
 
 
             </div>
