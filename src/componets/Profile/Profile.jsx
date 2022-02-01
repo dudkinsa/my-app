@@ -2,6 +2,8 @@ import React from 'react';
 import classes from './Profile.module.css';
 import MyPosts from "./MyPosts/MyPosts";
 
+
+
 const Profile = () => {
     return (
         <div className={classes.content}>
@@ -13,7 +15,9 @@ const Profile = () => {
                 ava + description
             </div>
 
-            <MyPosts/>
+            <MyPosts messageText = 'I`m first used function "props"!!! '/>
+
+
 
         </div>
     );

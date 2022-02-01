@@ -2,14 +2,14 @@ import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from "./Post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
     return (
         <div>
             <div>
                 My post
             </div>
             <div>
-                <textarea>Text</textarea>
+                <textarea>{props.messageText}</textarea>
                 <button>Add post</button>
                 <button>Remove</button>
             </div>
@@ -17,10 +17,10 @@ const MyPosts = () => {
                 New post
             </div>
             <div className={classes.posts}>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
+                <Post message='Hi, how are you?' quantityLikes = '1500'/>
+                <Post message = 'It`s my first post' quantityLikes = '1500'/>
+
+
             </div>
         </div>
     );
