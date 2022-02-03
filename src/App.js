@@ -8,6 +8,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import News from "./componets/News/News";
 import Music from "./componets/Music/Music";
 import Settings from "./componets/Settings/Settings";
+import MyPosts from "./componets/Profile/MyPosts/MyPosts";
 
 
 const App = (props) => {
