@@ -19,6 +19,12 @@ const DialogItem = (props) => {
         </div>
     );
 }
+const Message = (props) => {
+    return (
+        <div className={classes.dialog}>{props.message}</div>
+    );
+}
+
 const Dialogs = (props) => {
     return (
         <div className={classes.dialogs}>
@@ -29,28 +35,15 @@ const Dialogs = (props) => {
                 <DialogItem name="Valery" id='4'/>
                 <DialogItem name="Maksim" id='5'/>
                 <DialogItem name="Artem" id='6'/>
-
-                <div className={classes.dialog}>
-                    <NavLink to='/dialogs/2'>Dima</NavLink>
-                </div>
-                <div className={classes.dialog}>
-                    <NavLink to='/dialogs/2'>Alexandr</NavLink>
-                </div>
-                <div className={classes.dialog}>
-                    <NavLink to='/dialogs/3'>Valery</NavLink>
-                </div>
-                <div className={classes.dialog}>
-                    <NavLink to='/dialogs/4'>Maksim</NavLink>
-                </div>
             </div>
             <div className={classes.messages}>
-                <div className={classes.messages}>Hi</div>
-                <div className={classes.messages}>How are you!</div>
-                <div className={classes.messages}>Fine. Thank you! And you</div>
-                <div className={classes.messages}>Me too</div>
+                <Message message='Hi'/>
+                <Message message='How are you!'/>
+                <Message message='Fine. Thank you! And you?'/>
+                <Message message='Me too'/>
             </div>
         </div>
-
     );
 }
+
 export default Dialogs;
