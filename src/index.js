@@ -4,9 +4,31 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+let posts = [
+    {id: 0, message: 'Hi, how are you?', quantityLikes: 154},
+    {id: 1, message: 'It`s my first post', quantityLikes: 254},
+]
+
+let dialogsData = [
+    {id: 1, name: 'Sergey'},
+    {id: 2, name: 'Dima'},
+    {id: 3, name: 'Alexandr'},
+    {id: 4, name: 'Valery'},
+    {id: 5, name: 'Maksim'},
+    {id: 6, name: 'Artem'}
+]
+let messagesData = [
+    {id: 0, message: 'Hi'},
+    {id: 1, message: 'How are you!'},
+    {id: 2, message: 'Fine. Thank you! And you?'},
+    {id: 3, message: 'Me too'},
+    {id: 4, message: 'Me too'},
+    {id: 5, message: 'Me too'}
+]
+
 ReactDOM.render(
     <React.StrictMode>
-        <App/>
+        <App posts ={posts} dialogsData = {dialogsData} messagesData ={messagesData}/>
     </React.StrictMode>,
     document.getElementById('root')
 );

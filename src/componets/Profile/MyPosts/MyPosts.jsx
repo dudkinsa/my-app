@@ -3,14 +3,11 @@ import classes from './MyPosts.module.css';
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-    let posts = [
-        {id: 0, message: 'Hi, how are you?', quantityLikes: 154},
-        {id: 1, message: 'It`s my first post', quantityLikes: 254},
-    ]
+
 
     // Массив MAP
     let postElement =
-            posts.map(postsArray => <Post message={postsArray.message} quantityLikes={postsArray.quantityLikes}/>);
+            props.posts.map(postsArray => <Post message={postsArray.message} quantityLikes={postsArray.quantityLikes}/>);
 
     return (
         <div className={classes.postBlock}>
