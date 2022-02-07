@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 import MyPosts from "../Profile/MyPosts/MyPosts";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
+import MyTest from "./TestMessage/TestMessage";
 
 const Dialogs = (props) => {
 
@@ -12,13 +13,14 @@ const Dialogs = (props) => {
                  oldArray
                      .map(el => (<Message name ={el.name}/>))*/
     //Примечание: в стрелочной функции если имеется один парамет, то скобки не ставяься. у нас один параметр dialog и скобки не ставим.  Образец стрелочной функции:  name () => {};
-    let dialogElement = props.dialogsData.map(dialog => <DialogItem name={dialog.name} id ={dialog.id}/>);
+
+    let dialogElement = props.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
 
     let messageElement = props.messagesData.map(messageArray => <Message message={messageArray.message}/>);
 
     return (
         <div className={classes.dialogs}>
-            <div className={classes.dialogsItems} >
+            <div className={classes.dialogsItems}>
 
                 {dialogElement}
 
@@ -38,6 +40,10 @@ const Dialogs = (props) => {
                 <Message message={messagesData[3].message}/>
                 <Message message={messagesData[4].message}/>
                 <Message message={messagesData[5].message}/>*/}
+               <div>
+                   <h3>My test message</h3>
+               </div>
+                <MyTest/>
             </div>
         </div>
     );
