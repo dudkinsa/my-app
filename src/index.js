@@ -4,9 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from "./redux/state";
-
-
-
+import {addPost} from "./redux/state";
 
 /*
 
@@ -34,12 +32,15 @@ let messagesData = [
 ]
 
 */
-
+/*
+addPost('Ой йоо ой йоооо');
+*/
 
 ReactDOM.render(
     <React.StrictMode>
 
-        <App appState ={state}/>
+        <App finalState ={state} addPost ={addPost} />
+
 
 {/*
 

@@ -8,31 +8,41 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import News from "./componets/News/News";
 import Music from "./componets/Music/Music";
 import Settings from "./componets/Settings/Settings";
-import MyPosts from "./componets/Profile/MyPosts/MyPosts";
-
+import MyDialogs from "./componets/MyDialogs/MyDialogs";
+import ProfileInfo from "./componets/Profile/ProfileInfo/ProfileInfo";
+import state from "./redux/state";
+import {addPost} from "./redux/state";
 
 const App = (props) => {
 
     return (
         <BrowserRouter>
-            <div className='app-wrapper'>
-                <Header/>
-                <NavBar/>
-                <div className='app-wrapper-content'>
-                    <Routes>
+            <div>
+                <div className='app-wrapper'>
+                    <Header/>
+                    <NavBar/>
 
-                        <Route path="/dialogs/*"
-                               element={<Dialogs
-                                   dialogsData = {props.appState.dialogsData}
-                                   messagesData ={props.appState.messagesData}/>}/>
-                        <Route path="/profile/"
-                               element={<Profile
-                                   posts ={props.appState.posts}/>}/>
-                        <Route path="/news/" element={<News/>}/>
-                        <Route path="/music/" element={<Music/>}/>
-                        <Route path="/settings/" element={<Settings/>}/>
-                    </Routes>
+                    <div className='app-wrapper-content'>
 
+                        <Routes>
+                            <Route path="/my_dialogs/" element={<MyDialogs/>}/>
+
+
+                            <Route path="/dialogs/*"
+                                   element={<Dialogs
+                                       dialogsData={props.finalState.messagesPage.dialogsData}
+                                       messagesData={props.finalState.messagesPage.messagesData}/>}/>
+
+                            <Route path="/profile/"
+                                   element={<Profile
+                                       posts={props.finalState.profilePage.posts}
+                                       addPost={props.addPost}/>}/>
+
+                            <Route path="/music/" element={<Music/>}/>
+                            <Route path="/settings/" element={<Settings/>}/>
+
+                        </Routes>
+                    </div>
                 </div>
             </div>
         </BrowserRouter>

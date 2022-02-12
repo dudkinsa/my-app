@@ -14,6 +14,8 @@ const Dialogs = (props) => {
                      .map(el => (<Message name ={el.name}/>))*/
     //Примечание: в стрелочной функции если имеется один парамет, то скобки не ставяься. у нас один параметр dialog и скобки не ставим.  Образец стрелочной функции:  name () => {};
 
+
+
     let dialogElement = props.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
 
     let messageElement = props.messagesData.map(messageArray => <Message message={messageArray.message}/>);
@@ -33,6 +35,7 @@ const Dialogs = (props) => {
 
             </div>
             <div className={classes.messages}>
+
                 {messageElement}
                 {/*<Message message={messagesData[0].message}/>
                 <Message message={messagesData[1].message}/>

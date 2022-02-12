@@ -1,0 +1,14 @@
+.content {
+    grid-area: c;
+    width: 1280px;
+}
+
+.users{
+    display: grid;
+    grid-template-columns: 200px 200px
+}
+
+.messages{
+
+
+}

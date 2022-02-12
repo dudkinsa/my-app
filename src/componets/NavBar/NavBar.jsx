@@ -4,21 +4,32 @@ import {NavLink} from "react-router-dom";
 
 const NavBar = () => {
     return (
+
         <nav className={classes.nav}>
+
             <div className={classes.item}>
-                <NavLink to='/profile' className={navData => navData.isActive ? classes.activeLink : classes.item}>Profile</NavLink>
+                <NavLink to='/my_dialogs' className={navData => navData.isActive ? classes.activeLink : classes.item}>My dialogs</NavLink>
+            </div>
+
+            <div className={classes.item}>
+                <NavLink to='/profile'
+                         className={navData => navData.isActive ? classes.activeLink : classes.item}>Profile</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink to='/dialogs' className={navData => navData.isActive ? classes.activeLink : classes.item}>Messages</NavLink>
+                <NavLink to='/dialogs'
+                         className={navData => navData.isActive ? classes.activeLink : classes.item}>Messages</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink to='/news' className={navData => navData.isActive ? classes.activeLink : classes.item}>News</NavLink>
+                <NavLink to='/news'
+                         className={navData => navData.isActive ? classes.activeLink : classes.item}>News</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink to='/music' className={navData => navData.isActive ? classes.activeLink : classes.item}>Music</NavLink>
+                <NavLink to='/music'
+                         className={navData => navData.isActive ? classes.activeLink : classes.item}>Music</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink to='/settings'className={navData => navData.isActive ? classes.activeLink : classes.item}>Settings</NavLink>
+                <NavLink to='/settings'
+                         className={navData => navData.isActive ? classes.activeLink : classes.item}>Settings</NavLink>
             </div>
         </nav>
 
