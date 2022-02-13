@@ -8,14 +8,12 @@ const MyPosts = (props) => {
 
     // Массив MAP
         let postElement =
-                props.posts.map(postsArray => <Post message={postsArray.message}
-                                                         quantityLikes={postsArray.quantityLikes}/>);
+                props.posts.map(postsArray => <Post message={postsArray.message} quantityLikes={postsArray.quantityLikes}/>);
+
+
         let newPostElement = React.createRef();
-
         let addPost = () => {
-
             let text = newPostElement.current.value;
-
             props.addPost(text);
         }
 

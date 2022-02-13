@@ -4,6 +4,7 @@ let state = {
             {id: 0, message: 'Hi, how are you?', quantityLikes: 154},
             {id: 1, message: 'It`s my first post', quantityLikes: 254},
         ]
+
     },
     messagesPage: {
         dialogsData: [
@@ -25,13 +26,21 @@ let state = {
     }
 }
 
- export const addPost =(postMessage) =>{
-    let newPost = {
+
+export const addPost= (postMessages) =>{
+
+    let newPost ={
         id: 3,
-        message: postMessage,
+        message: postMessages,
         quantityLikes: 0
     };
     state.profilePage.posts.push(newPost);
 }
 
+
 export default state;
+
+
+
+
+

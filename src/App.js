@@ -10,8 +10,6 @@ import Music from "./componets/Music/Music";
 import Settings from "./componets/Settings/Settings";
 import MyDialogs from "./componets/MyDialogs/MyDialogs";
 import ProfileInfo from "./componets/Profile/ProfileInfo/ProfileInfo";
-import state from "./redux/state";
-import {addPost} from "./redux/state";
 
 const App = (props) => {
 
@@ -28,7 +26,7 @@ const App = (props) => {
                             <Route path="/my_dialogs/" element={<MyDialogs/>}/>
 
 
-                            <Route path="/dialogs/*"
+                           <Route path="/dialogs/*"
                                    element={<Dialogs
                                        dialogsData={props.finalState.messagesPage.dialogsData}
                                        messagesData={props.finalState.messagesPage.messagesData}/>}/>
@@ -36,7 +34,7 @@ const App = (props) => {
                             <Route path="/profile/"
                                    element={<Profile
                                        posts={props.finalState.profilePage.posts}
-                                       addPost={props.addPost}/>}/>
+                                   addPost={props.addPost}/>}/>
 
                             <Route path="/music/" element={<Music/>}/>
                             <Route path="/settings/" element={<Settings/>}/>
