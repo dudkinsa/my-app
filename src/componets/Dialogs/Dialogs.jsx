@@ -12,7 +12,7 @@ const Dialogs = (props) => {
     /*let newArray =
                  oldArray
                      .map(el => (<Message name ={el.name}/>))*/
-    //Примечание: в стрелочной функции если имеется один парамет, то скобки не ставяься. у нас один параметр dialog и скобки не ставим.  Образец стрелочной функции:  name () => {};
+    //Примечание: в стрелочной функции если имеется один параметр, то скобки не ставяься. у нас один параметр dialog и скобки не ставим.  Образец стрелочной функции:  name () => {};
 
 
 
@@ -25,14 +25,14 @@ const Dialogs = (props) => {
             <div className={classes.dialogsItems}>
 
                 {dialogElement}
-
-                {/*<DialogItem name={dialogsData[0].name} id ={dialogsData[0].id}/>
+{/*
+                <DialogItem name={dialogsData[0].name} id ={dialogsData[0].id}/>
                 <DialogItem name={dialogsData[1].name} id ={dialogsData[1].id}/>
                 <DialogItem name={dialogsData[2].name} id ={dialogsData[2].id}/>
                 <DialogItem name={dialogsData[3].name} id ={dialogsData[2].id}/>
                 <DialogItem name={dialogsData[4].name} id ={dialogsData[2].id}/>
-                <DialogItem name={dialogsData[5].name} id ={dialogsData[2].id}/>*/}
-
+                <DialogItem name={dialogsData[5].name} id ={dialogsData[2].id}/>
+div*/}
             </div>
             <div className={classes.messages}>
 

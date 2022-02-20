@@ -10,6 +10,7 @@ import Music from "./componets/Music/Music";
 import Settings from "./componets/Settings/Settings";
 import MyDialogs from "./componets/MyDialogs/MyDialogs";
 import ProfileInfo from "./componets/Profile/ProfileInfo/ProfileInfo";
+import UsersName from "./componets/MyDialogs/UsersName/UsersName";
 
 const App = (props) => {
 
@@ -23,18 +24,20 @@ const App = (props) => {
                     <div className='app-wrapper-content'>
 
                         <Routes>
-                            <Route path="/my_dialogs/" element={<MyDialogs/>}/>
+                            <Route path="/my_dialogs/*" element={<MyDialogs/>}/>
 
-
-                           <Route path="/dialogs/*"
+                            <Route path="/dialogs/"
                                    element={<Dialogs
                                        dialogsData={props.finalState.messagesPage.dialogsData}
                                        messagesData={props.finalState.messagesPage.messagesData}/>}/>
 
                             <Route path="/profile/"
                                    element={<Profile
-                                       posts={props.finalState.profilePage.posts}
-                                   addPost={props.addPost}/>}/>
+                                       profilePage={props.finalState.profilePage.posts}
+                                       newPostText={props.finalState.profilePage.newPostText}
+                                       addPost={props.addPost}
+
+                                       updateNewPostText={props.updateNewPostText}/>}/>
 
                             <Route path="/music/" element={<Music/>}/>
                             <Route path="/settings/" element={<Settings/>}/>

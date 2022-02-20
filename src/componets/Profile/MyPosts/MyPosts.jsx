@@ -12,9 +12,18 @@ const MyPosts = (props) => {
 
 
         let newPostElement = React.createRef();
+
         let addPost = () => {
+            //можно удалить. нет смысла отправлять в state
+            /*let text = newPostElement.current.value;*/
+
+            props.addPost();
+
+        }
+
+        let onPostChange = () =>{
             let text = newPostElement.current.value;
-            props.addPost(text);
+            props.updateNewPostText(text);
         }
 
         return (
@@ -23,8 +32,9 @@ const MyPosts = (props) => {
                     <h3>My post</h3>
                 </div>
                 <div>
+
                     <div>
-                        <textarea ref={newPostElement}> </textarea>
+                        <textarea  onChange={onPostChange} ref={newPostElement} value= {props.newPostText}> </textarea>
                     </div>
 
                     <button onClick={addPost}>Send</button>
@@ -43,16 +53,7 @@ const MyPosts = (props) => {
                 <div className={classes.posts}>
                     My new posts
                 </div>
-                <div>
-                    <MyNewPost messagePeople='Hi!'/>
-                    <MyNewPost messagePeople='Hi '/>
-                    <MyNewPost messagePeople='How are you?'/>
-                    <MyNewPost messagePeople="I'm OK And you?"/>
-                    <MyNewPost messagePeople="Me too. What are you doing?"/>
-                    <MyNewPost messagePeople="I'm programming the code now"/>
-                    <MyNewPost messagePeople="it's very good!"/>
 
-                </div>
 
 
             </div>

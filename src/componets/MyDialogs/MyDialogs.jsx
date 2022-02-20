@@ -1,23 +1,34 @@
 import React from 'react';
-import classes from '../MyDialogs/MyDialogs.module.css';
-import UsersDialogs from "./UsersDialogls/UsersDialogs";
+import UsersName from "./UsersName/UsersName";
 
 
+
+
+// array
  const MyDialogs = (props) =>{
+     let usersData = [
+         {id: 1, name: 'Sergey'},
+         {id: 2, name: 'Igor'},
+         {id: 3, name: 'Sveta'},
+         {id: 3, name: 'Natasha'},
+ ]
 
+    let usersNameElements = usersData.map( () => {<UsersName/>} );
+
+
+     let usersMessagesData =[
+         {id: 1, message: 'Hi'},
+         {id: 2, message: 'How are you?'},
+         {id: 3, message: 'Fine'},
+         {id: 4, message: 'And you?'}
+     ]
      return(
         <div>
-            <div className={classes.users}>
-                <UsersDialogs name ='Dima' id ='1'/>
-                <UsersDialogs name ='Sergey' id ='2'/>
-                <UsersDialogs name ='Yra' id ='3'/>
-            </div>
-            <div className={classes.messages}>
-                <UsersDialogs message ='Hi'/>
-            </div>
+            {usersNameElements}
+
         </div>
     );
  }
 
 
- export  default MyDialogs;
+ export default MyDialogs
